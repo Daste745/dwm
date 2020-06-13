@@ -1,0 +1,15 @@
+patch < patches/dwm-restartsig-20180523-6.2.diff
+patch < patches/dwm-nodmenu-6.2.diff
+patch < patches/dwm-decorhints-6.2.diff
+patch < patches/dwm-zoomswap-6.2.diff
+patch < patches/dwm-colorbar-6.2.diff
+patch < patches/dwm-noborder-6.2.diff
+patch < patches/dwm-focusonclick-20171030-6aa8e37.diff
+patch < patches/dwm-actualfullscreen-20191112-cb3f58a.diff
+patch < patches/dwm-cyclelayouts-20180524-6.2.diff
+patch < patches/dwm-center-6.2.diff
+patch < patches/dwm-r1522-viewontag.diff
+patch < patches/dwm-pertag-6.2.diff
+patch < patches/dwm-activetagindicatorbar-6.2.diff
+patch < patches/dwm-swallow-20200522-7accbcf.diff
+patch < patches/dwm-resizecorners-6.1.diff
