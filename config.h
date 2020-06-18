@@ -40,7 +40,7 @@ static const char        *colors[][3] = {
 };
 
 /* tagging */
-static const char *tags[] = { "", "", "", "", "", "", "", "", "" };
+static const char *tags[] = { "", "", "", "", "", "", "", "", "" };
 
 #define TAG(NUM) 1 << (NUM - 1)
 static const Rule rules[] = {
@@ -56,6 +56,7 @@ static const Rule rules[] = {
   { "Vivaldi-stable",    NULL,       NULL,      TAG(1),    0,          0,          0,          1,         -1 },
   { "discord",           NULL,       NULL,      TAG(2),    0,          0,          0,          1,         -1 },
   { "jetbrains-pycharm", NULL,       NULL,      TAG(3),    0,          0,          0,          1,         -1 },
+  { "Transmission-gtk",  NULL,       NULL,      TAG(7),    0,          0,          0,          1,         -1 },
   { "Steam",             NULL,       NULL,      TAG(8),    0,          0,          0,          1,         -1 },
   { "Steam",             NULL, "Friends List",  TAG(8),    0,          1,          0,          1,         -1 },
   { "Steam",             NULL, "Steam - News",  TAG(8),    0,          1,          0,          1,         -1 },
