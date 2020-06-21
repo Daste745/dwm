@@ -21,47 +21,50 @@ static const char        *fonts[]           = {
   "Font Awesome 5 Free:size=12",
 };
 
-static const char         col_fg[]          = "#fbf1c7";   /* gruvbox fg0 */
-static const char         col_bg[]          = "#282828";   /* gruvbox bg0 */
-static const char         col_border[]      = "#504945";   /* gruvbox bg2 */
-static const char         col_border_foc[]  = "#458588";   /* gruvbox blue */
+static const char col_fg[] = "#ebdbb2";
+static const char col_bg[] = "#1d2021";
+static const char col_bl[] = "#458588";
 
-static const char        *colors[][3] = {
-	/*                   fg      bg              border   */
-	[SchemeNorm]     = { col_fg, col_bg,         col_border },
-	[SchemeSel]      = { col_fg, col_border_foc, col_border_foc  },
+static const char *colors[][3] = {
+ /* Decorations        fg      bg          border   */
+  [SchemeNorm]     = { col_fg, col_bg,     col_bg },
+  [SchemeSel]      = { col_fg, col_bl,     col_bl },
 
-  /*                   text    background  n/a */
-	[SchemeStatus]   = { col_fg, col_bg,  "#000000"  },         /* Statusbar right */
-	[SchemeTagsSel]  = { col_fg, col_border_foc,  "#000000"  }, /* Tagbar left selected */
-  [SchemeTagsNorm] = { col_fg, col_bg,  "#000000"  },         /* Tagbar left unselected */
-  [SchemeInfoSel]  = { col_fg, col_bg,  "#000000"  },         /* infobar middle selected */
-  [SchemeInfoNorm] = { col_fg, col_bg,  "#000000"  },         /* infobar middle unselected */
+ /* Bar                text    background  n/a */
+	[SchemeStatus]   = { col_fg, col_bg,     "#000000" }, /* Status */
+	[SchemeTagsSel]  = { col_fg, col_bl,     "#000000" }, /* Tag selected */
+  [SchemeTagsNorm] = { col_fg, col_bg,     "#000000" }, /* Tag unselected */
+  [SchemeInfoSel]  = { col_fg, col_bg,     "#000000" }, /* Window title full */
+  [SchemeInfoNorm] = { col_fg, col_bg,     "#000000" }, /* Window title empty */
 };
 
 /* tagging */
 static const char *tags[] = { "", "", "", "", "", "", "", "", "" };
-
 #define TAG(NUM) 1 << (NUM - 1)
+
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class               instance    title      tags mask  iscentered  isfloating  isterminal  noswallow  monitor */
+  { "st",                NULL,       NULL,      0,         0,          0,          1,          1,         -1 },
   { NULL,                NULL, "Event Tester",  0,         0,          1,          0,          1,         -1 },
   { "JetBrains Toolbox", NULL,       NULL,      0,         0,          1,          0,          0,         -1 },
   { "feh",               NULL,       NULL,      0,         1,          1,          0,          0,         -1 },
-  { "st",                NULL,       NULL,      0,         0,          0,          1,          1,         -1 },
+  { NULL,                NULL, "pulsemixer",    0,         1,          1,          0,          1,         -1 },
+
   { "Vivaldi-stable",    NULL,       NULL,      TAG(1),    0,          0,          0,          1,         -1 },
   { "discord",           NULL,       NULL,      TAG(2),    0,          0,          0,          1,         -1 },
   { "jetbrains-pycharm", NULL,       NULL,      TAG(3),    0,          0,          0,          1,         -1 },
   { "Transmission-gtk",  NULL,       NULL,      TAG(7),    0,          0,          0,          1,         -1 },
+
   { "Steam",             NULL,       NULL,      TAG(8),    0,          0,          0,          1,         -1 },
   { "Steam",             NULL, "Friends List",  TAG(8),    0,          1,          0,          1,         -1 },
   { "Steam",             NULL, "Steam - News",  TAG(8),    0,          1,          0,          1,         -1 },
   { NULL,                NULL, "Zoom - Free Account",  0,  0,          1,          0,          1,         -1 },
   { "Lutris",            NULL,       NULL,      TAG(8),    0,          0,          0,          1,         -1 },
+
   { "Spotify",           NULL,       NULL,      TAG(9),    0,          0,          0,          1,         -1 },
 };
 
