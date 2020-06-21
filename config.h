@@ -86,10 +86,10 @@ static const Layout layouts[] = {
 	{ "[]=",      tile },
 	{ "><>",      NULL },
 
-  { "|M|",      centeredmaster},
-  { ">M<",      centeredfloatingmaster},
+  { "|M|",      centeredmaster },
+  { ">M<",      centeredfloatingmaster },
 
-  { NULL,       NULL },   /* used for cyclelayouts */
+  { NULL,       NULL }, /* used for cyclelayouts */
 };
 
 /* key definitions */
@@ -135,10 +135,10 @@ static Key keys[] = {
 
   { MOD,                 XK_g,            togglegaps,     {0} },
   { MOD|ShiftMask,       XK_g,            defaultgaps,    {0} },
-  { MOD,                 XK_bracketright, incrgaps,      {.i = +1} },
-  { MOD,                 XK_bracketleft,  incrgaps,      {.i = -1} },
-  { MOD|ShiftMask,       XK_bracketright, incrgaps,      {.i = +5} },
-  { MOD|ShiftMask,       XK_bracketleft,  incrgaps,      {.i = -5} },
+  { MOD,                 XK_bracketright, incrgaps,       {.i = +1} },
+  { MOD,                 XK_bracketleft,  incrgaps,       {.i = -1} },
+  { MOD|ShiftMask,       XK_bracketright, incrgaps,       {.i = +5} },
+  { MOD|ShiftMask,       XK_bracketleft,  incrgaps,       {.i = -5} },
 
 	{ MOD,                 XK_y,            setlayout,      {.v = &layouts[0]} },
 	{ MOD|ShiftMask,       XK_y,            setlayout,      {.v = &layouts[1]} },
@@ -149,8 +149,8 @@ static Key keys[] = {
 	{ MOD,                 XK_o,            setlayout,      {.v = &layouts[6]} },
 	{ MOD|ShiftMask,       XK_o,            setlayout,      {.v = &layouts[7]} },
 	{ MOD,                 XK_space,        setlayout,      {0} },
-	{ MOD,                 XK_p,            cyclelayout,    {.i = 0} },
-	{ MOD|ShiftMask,       XK_p,            cyclelayout,    {.i = 1} },
+	{ MOD,                 XK_p,            cyclelayout,    {.i = 1} },
+	{ MOD|ShiftMask,       XK_p,            cyclelayout,    {.i = 0} },
 
 	{ MOD|ShiftMask|ALT,   XK_F12,          quit,           {0} },
 	{ MOD|ShiftMask,       XK_F12,          quit,           {1} },
@@ -164,8 +164,12 @@ static Button buttons[] = {
 	{ ClkTagBar,            ControlMask,    Button1,        toggleview,     {0} },
 	{ ClkTagBar,            0,              Button3,        toggleview,     {0} },
 
-	{ ClkLtSymbol,          0,              Button1,        cyclelayout,    {.i = 0} },
-	{ ClkLtSymbol,          0,              Button3,        cyclelayout,    {.i = 1} },
+	{ ClkLtSymbol,          0,              Button1,        cyclelayout,    {.i = 1} },
+	{ ClkLtSymbol,          0,              Button3,        cyclelayout,    {.i = 0} },
+
+  /* TODO: Kill and focus client on fancybar */
+	// { ClkWinTitle,          0,              Button1,        focusstack,     { .i = 0 } },
+	{ ClkWinTitle,          0,              Button2,        killclient,     { 0 } },
 
 	{ ClkClientWin,         MOD,            Button1,        movemouse,      {0} },
 	{ ClkClientWin,         MOD,            Button2,        togglefloating, {0} },
