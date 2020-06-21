@@ -23,19 +23,19 @@ static const char        *fonts[]           = {
 
 static const char col_fg[] = "#ebdbb2";
 static const char col_bg[] = "#1d2021";
-static const char col_bl[] = "#458588";
+static const char col_hl[] = "#458588";
 
 static const char *colors[][3] = {
  /* Decorations        text    background  border   */
   [SchemeNorm]     = { col_fg, col_bg,     col_bg },
-  [SchemeSel]      = { col_fg, col_bl,     col_bl },
+  [SchemeSel]      = { col_fg, col_hl,     col_hl },
 
  /* Bar                text    background  n/a */
 	[SchemeStatus]   = { col_fg, col_bg,     "#000000" }, /* Status */
-	[SchemeTagsSel]  = { col_bl, col_bg,     "#000000" }, /* Tag selected */
-  [SchemeTagsNorm] = { col_fg, col_bg,     "#000000" }, /* Tag unselected */
-  [SchemeInfoSel]  = { col_fg, col_bg,     "#000000" }, /* Window title full */
-  [SchemeInfoNorm] = { col_fg, col_bg,     "#000000" }, /* Window title empty */
+	[SchemeTagsSel]  = { col_hl, col_bg,     "#000000" }, /* Tag focused */
+  [SchemeTagsNorm] = { col_fg, col_bg,     "#000000" }, /* Tag unfocused */
+  [SchemeInfoSel]  = { col_hl, col_bg,     "#000000" }, /* Window title focused */
+  [SchemeInfoNorm] = { col_fg, col_bg,     "#000000" }, /* Window title unfocused */
 };
 
 /* tagging */

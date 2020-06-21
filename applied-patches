@@ -16,3 +16,5 @@ patch < patches/dwm-resizecorners-6.1.diff
 patch < patches/dwm-movestack-6.1.diff
 
 patch < patches/dwm-hide_vacant_tags-6.2.diff
+patch < patches/dwm-fancybar-6.2.diff
+
