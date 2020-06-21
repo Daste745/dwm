@@ -17,8 +17,8 @@ static const int          smartgaps        = 1;   /* 1 means no outer gap when t
 
 static const char        *fonts[]           = {
   "Noto Sans Mono:style=Regular:size=11",
-  "Font Awesome 5 Brands:size=12",
-  "Font Awesome 5 Free:size=12",
+  "Font Awesome 5 Brands",
+  "Font Awesome 5 Free",
 };
 
 static const char col_fg[] = "#ebdbb2";
@@ -26,13 +26,13 @@ static const char col_bg[] = "#1d2021";
 static const char col_bl[] = "#458588";
 
 static const char *colors[][3] = {
- /* Decorations        fg      bg          border   */
+ /* Decorations        text    background  border   */
   [SchemeNorm]     = { col_fg, col_bg,     col_bg },
   [SchemeSel]      = { col_fg, col_bl,     col_bl },
 
  /* Bar                text    background  n/a */
 	[SchemeStatus]   = { col_fg, col_bg,     "#000000" }, /* Status */
-	[SchemeTagsSel]  = { col_fg, col_bl,     "#000000" }, /* Tag selected */
+	[SchemeTagsSel]  = { col_bl, col_bg,     "#000000" }, /* Tag selected */
   [SchemeTagsNorm] = { col_fg, col_bg,     "#000000" }, /* Tag unselected */
   [SchemeInfoSel]  = { col_fg, col_bg,     "#000000" }, /* Window title full */
   [SchemeInfoNorm] = { col_fg, col_bg,     "#000000" }, /* Window title empty */

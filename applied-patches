@@ -15,3 +15,4 @@ patch < patches/dwm-swallow-20200522-7accbcf.diff
 patch < patches/dwm-resizecorners-6.1.diff
 patch < patches/dwm-movestack-6.1.diff
 
+patch < patches/dwm-hide_vacant_tags-6.2.diff
