@@ -170,6 +170,8 @@ static Button buttons[] = {
   /* TODO: Kill and focus client on fancybar */
 	// { ClkWinTitle,          0,              Button1,        focusstack,     { .i = 0 } },
 	{ ClkWinTitle,          0,              Button2,        killclient,     { 0 } },
+	{ ClkWinTitle,          0,              Button4,        focusstack,      { .i = -1 } },
+	{ ClkWinTitle,          0,              Button5,        focusstack,      { .i = +1 } },
 
 	{ ClkClientWin,         MOD,            Button1,        movemouse,      {0} },
 	{ ClkClientWin,         MOD,            Button2,        togglefloating, {0} },
